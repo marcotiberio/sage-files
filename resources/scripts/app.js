@@ -1,4 +1,9 @@
 import {domReady} from '@roots/sage/client';
+import Alpine from 'alpinejs'
+ 
+window.Alpine = Alpine
+ 
+Alpine.start()
 
 /**
  * app.main

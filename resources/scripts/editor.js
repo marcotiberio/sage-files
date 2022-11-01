@@ -1,5 +1,10 @@
 import {domReady} from '@roots/sage/client';
 import {registerBlockStyle, unregisterBlockStyle} from '@wordpress/blocks';
+import Alpine from 'alpinejs'
+ 
+window.Alpine = Alpine
+ 
+Alpine.start()
 
 /**
  * editor.main
