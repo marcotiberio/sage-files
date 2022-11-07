@@ -1,5 +1,39 @@
 <?php
 
+// die((get_template_directory()));
+
+//add component fields
+foreach (glob(get_template_directory() . "/resources/blocks/**/*.php") as $file) {
+    // die($file);
+    include $file;
+}
+
+// add_action( 'acf/init', 'my_register_blocks' );
+//     function my_register_blocks() {
+
+//         // check function exists
+//         if ( function_exists( 'acf_register_block' ) ) {
+//             // register a testimonial block
+//             acf_register_block( array(
+//                 'name'            => 'example',
+//                 'title'           => __( 'Example' ),
+//                 'description'     => __( 'A test block.' ),
+//                 'render_template' => 'resources/blocks/example/example.blade.php'
+//             ));
+//         }
+
+//         // check function exists
+//         if ( function_exists( 'acf_register_block' ) ) {
+//             // register a testimonial block
+//             acf_register_block( array(
+//                 'name'            => 'ciao',
+//                 'title'           => __( 'Ciao' ),
+//                 'description'     => __( 'A ciao block.' ),
+//                 'render_template' => 'resources/blocks/example/ciao.blade.php'
+//             ));
+//         }
+//     }
+
 /*
 |--------------------------------------------------------------------------
 | Whitelisted Gutenberg Blocks Sage
