@@ -3,10 +3,10 @@
 // die((get_template_directory()));
 
 //add component fields
-foreach (glob(get_template_directory() . "/resources/blocks/**/*.php") as $file) {
-    // die($file);
-    include $file;
-}
+// foreach (glob(get_template_directory() . "/resources/blocks/**/*.php") as $file) {
+//     // die($file);
+//     include $file;
+// }
 
 // add_action( 'acf/init', 'my_register_blocks' );
 //     function my_register_blocks() {

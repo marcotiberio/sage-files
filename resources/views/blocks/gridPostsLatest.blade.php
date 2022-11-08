@@ -11,16 +11,16 @@
   <?php
   $featured_posts = get_field('grid_posts_latest');
   if( $featured_posts ): ?>
-      <ul>
+    <ul>
       <?php foreach( $featured_posts as $featured_post ):
           $permalink = get_permalink( $featured_post->ID );
           $title = get_the_title( $featured_post->ID );
           ?>
           <li>
-              <a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
+              <a class="text-2xl font-bold" href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
           </li>
       <?php endforeach; ?>
-      </ul>
+    </ul>
   <?php endif; ?>
 </section>
 

@@ -1,13 +1,13 @@
 {
-    "key": "group_6352a949b9eec",
-    "title": "Grid Posts Latest",
+    "key": "group_636a2ce8d0cdc",
+    "title": "Image Custom",
     "fields": [
         {
-            "key": "field_6352a94af662f",
-            "label": "Grid Posts Latest",
-            "name": "grid_posts_latest",
+            "key": "field_636a2ce90c554",
+            "label": "Image Main",
+            "name": "image_main",
             "aria-label": "",
-            "type": "taxonomy",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,14 +16,16 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "category",
-            "add_term": 1,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "object",
-            "field_type": "multi_select",
-            "allow_null": 1,
-            "multiple": 0
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -31,18 +33,18 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/gridpostslatest"
+                "value": "acf\/image"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "preview",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667916884
+    "modified": 1667902729
 }
