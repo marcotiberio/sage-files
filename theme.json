@@ -20,6 +20,16 @@
           "color": "#000"
         },
         {
+          "name": "Gray",
+          "slug": "gray",
+          "color": "#979797"
+        },
+        {
+          "name": "Blue",
+          "slug": "blue",
+          "color": "#1c64f2"
+        },
+        {
           "name": "Primary",
           "slug": "primary",
           "color": "#800080"

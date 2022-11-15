@@ -8,8 +8,8 @@
   EnqueueStyle: styles/blocks/image.scss
 --}}
 
-<section data-{{$block['id']}} class="{{$block['classes']}}">
-  <div class="max-w-screen-xl">
+<section data-{{$block['id']}} class="{{$block['classes']}} p-4">
+  <div class="max-w-screen-xl mx-auto">
       <figure class="max-w-screen-md mx-auto">
         <?php 
           $image = get_field('image_main');

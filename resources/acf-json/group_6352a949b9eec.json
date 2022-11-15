@@ -3,6 +3,104 @@
     "title": "Grid Posts Latest",
     "fields": [
         {
+            "key": "field_headline",
+            "label": "Headline",
+            "name": "headline",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_content",
+            "label": "Content",
+            "name": "content_html",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "default",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_primarybutton",
+            "label": "Primary Button",
+            "name": "primary_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50%",
+                "class": "",
+                "id": ""
+            },
+            "return": "array",
+            "return_format": "array"
+        },
+        {
+            "key": "field_secondarybutton",
+            "label": "Secondary Button",
+            "name": "secondary_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50%",
+                "class": "",
+                "id": ""
+            },
+            "return": "array",
+            "return_format": "array"
+        },
+        {
+            "key": "field_637251101ee07",
+            "label": "Alignment",
+            "name": "alignment",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            },
+            "default_value": "center : Center",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
             "key": "field_6352a94af662f",
             "label": "Grid Posts Latest",
             "name": "grid_posts_latest",
@@ -17,9 +115,9 @@
                 "id": ""
             },
             "taxonomy": "category",
-            "add_term": 1,
-            "save_terms": 1,
-            "load_terms": 1,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
             "return_format": "object",
             "field_type": "multi_select",
             "allow_null": 1,
@@ -44,5 +142,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667916884
+    "modified": 1668443307
 }

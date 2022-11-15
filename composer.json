@@ -42,7 +42,6 @@
     "php": "^7.4|^8.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.9",
     "mwdelaney/sage-acf-gutenberg-blocks": "^0.7.0",
-    "mwdelaney/sage-advanced-custom-fields": "^1.6",
     "roots/acorn": "^2.1",
     "wpackagist-plugin/acf-autosize": "^2.0",
     "wpackagist-plugin/acf-hide-layout": "^1.0",

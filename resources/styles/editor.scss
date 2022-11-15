@@ -1,6 +1,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import 'base/base.scss';
+@import 'base/header.scss';
+@import 'base/main.scss';
+@import 'blocks/gridPostsLatest.scss';
 
 .edit-post-visual-editor__post-title-wrapper {
     @apply text-center;

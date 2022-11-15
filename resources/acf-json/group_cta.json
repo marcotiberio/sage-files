@@ -1,10 +1,10 @@
 {
-    "key": "group_hero",
-    "title": "Hero",
+    "key": "group_cta",
+    "title": "CTA",
     "fields": [
         {
             "key": "field_headline",
-            "label": "Headline",
+            "label": "Header",
             "name": "headline",
             "aria-label": "",
             "type": "textarea",
@@ -77,7 +77,7 @@
             "return_format": "array"
         },
         {
-            "key": "field_637251101ee07",
+            "key": "field_63724eaf011c9",
             "label": "Alignment",
             "name": "alignment",
             "aria-label": "",
@@ -106,7 +106,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/hero"
+                "value": "acf\/cta"
             }
         ]
     ],
@@ -119,5 +119,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668436356
+    "modified": 1668436292
 }

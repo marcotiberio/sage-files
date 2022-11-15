@@ -12,5 +12,15 @@ namespace App;
  * @return string
  */
 add_filter('excerpt_more', function () {
-    return sprintf(' &hellip; <a href="%s">%s</a>', get_permalink(), __('Continued', 'sage'));
+    return sprintf('<a href="%s" class="flex justify-end w-full mt-sm">%s</a>', get_permalink(), __('Read More →', 'sage'));
 });
+
+/**
+ *
+ *
+ * @return string
+ */
+
+// add_filter('sage/blocks/my-block/data', function ($block) { 
+
+// });

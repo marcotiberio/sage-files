@@ -1,11 +1,11 @@
 {{--
-  Title: Hero
+  Title: CTA
   Category: formatting
   Icon: admin-comments
   Align: full
   Mode: preview
-  EnqueueStyle: styles/blocks/hero.scss
-  EnqueueScript: script/blocks/hero.js
+  EnqueueStyle: styles/blocks/cta.scss
+  EnqueueScript: script/blocks/cta.js
 --}}
 
 <section data-{{$block['id']}} class="{{$block['classes']}}">
