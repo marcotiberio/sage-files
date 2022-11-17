@@ -9,7 +9,7 @@
 --}}
 
 <section data-{{$block['id']}} class="{{$block['classes']}} max-w-screen-xl mx-auto p-5">
-  <div>
+  <div class="content columns--{{the_field('columns')}}">
     {{the_field('contentHtml')}}
   </div>
 </section>

@@ -51,3 +51,22 @@ main {
         text-align: right;   
     }
 }
+
+.columns {
+    @media (min-width: 641px) {
+        &--one {
+            p {
+                column-count: 1;
+                @apply gap-lg
+            }
+            
+        }
+    
+        &--two {
+            p {
+                column-count: 2;
+                @apply gap-lg
+            }
+        }
+    }
+}
