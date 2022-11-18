@@ -40,31 +40,11 @@
   },
   "require": {
     "php": "^7.4|^8.0",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9",
-    "mwdelaney/sage-acf-gutenberg-blocks": "^0.7.0",
-    "roots/acorn": "^2.1",
-    "wpackagist-plugin/acf-autosize": "^2.0",
-    "wpackagist-plugin/acf-hide-layout": "^1.0",
-    "wpackagist-plugin/acf-repeater-flexible-content-collapser": "^1.2",
-    "wpackagist-plugin/intuitive-custom-post-order": "3.1.2.1"
+    "mwdelaney/sage-acf-gutenberg-blocks": "^0.7.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "3.7.1"
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": [
-        "wpackagist-plugin/*",
-        "wpackagist-theme/*"
-      ]
-    },
-    {
-      "type": "composer",
-      "url": "http://composer.arnespremberg.com"
-    }
-  ],
   "suggest": {
     "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0).",
     "log1x/sage-svg": "A useful SVG directive for inlining SVG's within Blade views (^1.0)."
@@ -82,17 +62,6 @@
     ]
   },
   "extra": {
-    "installer-paths": {
-      "../../mu-plugins/{$name}/": [
-        "type:wordpress-muplugin"
-      ],
-      "../../plugins/{$name}/": [
-        "type:wordpress-plugin"
-      ],
-      "../{$name}/": [
-        "type:wordpress-theme"
-      ]
-    },
     "acorn": {
       "providers": [
         "App\\Providers\\ThemeServiceProvider"

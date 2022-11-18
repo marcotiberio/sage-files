@@ -25,6 +25,11 @@
           "color": "#979797"
         },
         {
+          "name": "Lightgray",
+          "slug": "lightgray",
+          "color": "#f3f4f6"
+        },
+        {
           "name": "Blue",
           "slug": "blue",
           "color": "#1c64f2"

@@ -29,7 +29,7 @@ export default async (app) => {
     /**
      * Proxy origin (`WP_HOME`)
      */
-    .proxy("http://futureplayground.local")
+    .proxy("http://bvmn-test.local")
 
     /**
      * Development origin

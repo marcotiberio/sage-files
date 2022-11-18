@@ -16,6 +16,22 @@ header.banner {
             &:not(:last-child) {
                 margin-right: 20px;
             }
+
+            a {
+                @apply no-underline;
+                @apply underline-offset-[3px];
+
+                &:hover {
+                    @apply underline;
+                }
+            }
+
+            &.current-menu-item {
+                a {
+                    @apply underline;
+                    @apply underline-offset-[3px];
+                }
+            }
         }
     }
 }

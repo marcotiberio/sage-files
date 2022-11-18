@@ -1,11 +1,11 @@
 <article @php(post_class())>
-  <header class="max-w-screen-xl mx-auto my-lg">
-    <div class="mb-sm border-1 border-black">
-      <img src="<?php the_post_thumbnail_url('large'); ?>" class="w-full h-full object-cover">
-    </div>
-    <h1 class="entry-title p-4 text-4xl">
+  <header class="max-w-screen-xl mx-auto my-lg p-5">
+    <h1 class="entry-title py-4 mb-lg text-4xl font-extrabold">
       {!! $title !!}
     </h1>
+    <div class="mb-sm border-1 border-black">
+      <img src="<?php the_post_thumbnail_url('large'); ?>" class="w-full h-full object-cover aspect-[16/6]">
+    </div>
 
     {{-- @include('partials.entry-meta') --}}
   </header>

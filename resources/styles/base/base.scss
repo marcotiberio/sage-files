@@ -9,6 +9,15 @@
 /* Typography */
 
 main {
+    @apply mt-lg;
+    
+    p,
+    .paragraph,
+    table,
+    figure {
+    margin: 0 0 1.2rem;
+    }
+
     a {
         @apply text-blue;
     
