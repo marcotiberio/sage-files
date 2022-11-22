@@ -1,0 +1,17 @@
+{
+    "name": "newsletter",
+    "title": "Newsletter",
+    "description": "Displays a newsletter subscription form.",
+    "category": "theme",
+    "apiVersion": 2,
+    "keywords": [
+        "posts"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "/resources/blocks/newsletter/block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

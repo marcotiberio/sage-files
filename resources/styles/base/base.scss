@@ -28,6 +28,13 @@ main {
     }
 }
 
+button,
+.button,
+input[type=button],
+input[type=submit] {
+    @apply ease-linear duration-200;
+}
+
 /* Custom Classes */
 
 .content {

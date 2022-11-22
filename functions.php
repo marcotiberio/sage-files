@@ -1,43 +1,65 @@
 <?php
 
-// function custom_excerpt_length( $length ) {
-// 	return 20;
-// }
-// add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+/*
+|--------------------------------------------------------------------------
+| Register ACF Blocks
+|--------------------------------------------------------------------------
+*/
 
-// die((get_template_directory()));
+require get_template_directory() . '/resources/blocks/register-blocks.php';
 
-//add component fields
-// foreach (glob(get_template_directory() . "/resources/blocks/**/*.php") as $file) {
-//     // die($file);
-//     include $file;
-// }
+/*
+|--------------------------------------------------------------------------
+| Register CPT
+|--------------------------------------------------------------------------
+*/
 
-// add_action( 'acf/init', 'my_register_blocks' );
-//     function my_register_blocks() {
+add_action( 'init', function() {
+	register_extended_post_type( 'report', [
 
-//         // check function exists
-//         if ( function_exists( 'acf_register_block' ) ) {
-//             // register a testimonial block
-//             acf_register_block( array(
-//                 'name'            => 'example',
-//                 'title'           => __( 'Example' ),
-//                 'description'     => __( 'A test block.' ),
-//                 'render_template' => 'resources/blocks/example/example.blade.php'
-//             ));
-//         }
+		# Add Gutenberg
+		'show_in_rest' => true,
 
-//         // check function exists
-//         if ( function_exists( 'acf_register_block' ) ) {
-//             // register a testimonial block
-//             acf_register_block( array(
-//                 'name'            => 'ciao',
-//                 'title'           => __( 'Ciao' ),
-//                 'description'     => __( 'A ciao block.' ),
-//                 'render_template' => 'resources/blocks/example/ciao.blade.php'
-//             ));
-//         }
-//     }
+		# Show all posts on the post type archive:
+		// 'archive' => [
+		// 	'nopaging' => true,
+		// ],
+
+		# Add some custom columns to the admin screen:
+		// 'admin_cols' => [
+		// 	'story_featured_image' => [
+		// 		'title'          => 'Illustration',
+		// 		'featured_image' => 'thumbnail'
+		// 	],
+		// 	'story_published' => [
+		// 		'title_icon'  => 'dashicons-calendar-alt',
+		// 		'meta_key'    => 'published_date',
+		// 		'date_format' => 'd/m/Y'
+		// 	],
+		// 	'story_genre' => [
+		// 		'taxonomy' => 'genre'
+		// 	],
+		// ],
+
+		# Add some dropdown filters to the admin screen:
+		// 'admin_filters' => [
+		// 	'story_genre' => [
+		// 		'taxonomy' => 'genre'
+		// 	],
+		// 	'story_rating' => [
+		// 		'meta_key' => 'star_rating',
+		// 	],
+		// ],
+
+	], [
+
+		# Override the base names used for labels:
+		// 'singular' => 'Story',
+		// 'plural'   => 'Stories',
+		// 'slug'     => 'stories',
+
+	] );
+} );
 
 /*
 |--------------------------------------------------------------------------
@@ -93,186 +115,6 @@ function add_nav_menu_item_class( $items ) {
         $item->classes[] = 'no-underline hover:underline';
     }
     return $items;
-}
-
-/*
-|--------------------------------------------------------------------------
-| Add TinyMce Support
-|--------------------------------------------------------------------------
-*/
-
-function getBlockFormats($blockFormats)
-{
-    if (!empty($blockFormats)) {
-        $blockFormatStrings = array_map(
-            function ($tag, $label) {
-                return "${label}=${tag}";
-            },
-            $blockFormats,
-            array_keys($blockFormats)
-        );
-        return implode(';', $blockFormatStrings);
-    }
-    return '';
-}
-
-function getConfig()
-{
-    return [
-        'blockformats' => [
-            'Paragraph' => 'p',
-            'Heading 1' => 'h1',
-            'Heading 2' => 'h2',
-            'Heading 3' => 'h3',
-            'Heading 4' => 'h4',
-            'Heading 5' => 'h5',
-            'Heading 6' => 'h6'
-        ],
-        'styleformats' => [
-            [
-                'title' => 'Headings',
-                'icon' => '',
-                'items' => [
-                    [
-                        'title' => 'Heading 1',
-                        'classes' => 'h1',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 2',
-                        'classes' => 'h2',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 3',
-                        'classes' => 'h3',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 4',
-                        'classes' => 'h4',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 5',
-                        'classes' => 'h5',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 6',
-                        'classes' => 'h6',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Sans',
-                        'classes' => 'sans',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Serif',
-                        'classes' => 'serif',
-                        'selector' => '*'
-                    ]
-                ]
-            ],
-            [
-                'title' => 'Body',
-                'icon' => '',
-                'items' => [
-                    [
-                        'title' => 'Small',
-                        'classes' => 'small',
-                        'selector' => 'p'
-                    ],
-                    [
-                        'title' => 'Sans',
-                        'classes' => 'sans',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Sans',
-                        'classes' => 'sans',
-                        'selector' => '*'
-                    ]
-                ]
-            ],
-            [
-                'title' => 'Buttons',
-                'icon' => '',
-                'items' => [
-                    [
-                        'title' => 'Button',
-                        'classes' => 'button',
-                        'selector' => 'a,button'
-                    ],
-                    [
-                        'title' => 'Button Ghost',
-                        'classes' => 'button--ghost',
-                        'selector' => 'a,button'
-                    ],
-                    [
-                        'title' => 'Button Small',
-                        'classes' => 'button--small',
-                        'selector' => '.button'
-                    ],
-                    [
-                        'title' => 'Button Link',
-                        'classes' => 'button--link',
-                        'selector' => '.button'
-                    ]
-                ]
-            ]
-        ],
-        'toolbars' => [
-            'default' => [
-                [
-                    'formatselect',
-                    'styleselect',
-                    'bold',
-                    'italic',
-                    'underline',
-                    'superscript',
-                    'blockquote',
-                    '|',
-                    'forecolor',
-                    'backcolor',
-                    '|',
-                    'alignleft',
-                    'aligncenter',
-                    'alignright',
-                    'alignjustify',
-                    '|',
-                    'bullist',
-                    'numlist',
-                    '|',
-                    'link',
-                    'unlink',
-                    '|',
-                    'removeformat'
-                ]
-            ],
-            'basic' => [
-                [
-                    'bold',
-                    'italic',
-                    'underline',
-                    'superscript',
-                    'blockquote',
-                    '|',
-                    'forecolor',
-                    'backcolor',
-                    '|',
-                    'alignleft',
-                    'aligncenter',
-                    'alignright',
-                    'alignjustify',
-                    '|',
-                    'link',
-                    'unlink'
-                ]
-            ]
-        ]
-    ];
 }
 
 /*

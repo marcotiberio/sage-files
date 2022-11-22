@@ -1,0 +1,18 @@
+{
+    "name": "posts-loop",
+    "title": "Posts Loop Block",
+    "description": "Displays a list of posts.",
+    "category": "theme",
+    "apiVersion": 2,
+    "keywords": [
+        "posts",
+        "blog"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "/resources/blocks/posts-loop/block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

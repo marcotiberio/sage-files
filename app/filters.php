@@ -70,6 +70,180 @@ add_filter('acf/fields/wysiwyg/toolbars', function ($toolbars) {
     return $toolbars;
 });
 
+function getBlockFormats($blockFormats)
+{
+    if (!empty($blockFormats)) {
+        $blockFormatStrings = array_map(
+            function ($tag, $label) {
+                return "${label}=${tag}";
+            },
+            $blockFormats,
+            array_keys($blockFormats)
+        );
+        return implode(';', $blockFormatStrings);
+    }
+    return '';
+}
+
+function getConfig()
+{
+    return [
+        'blockformats' => [
+            'Paragraph' => 'p',
+            'Heading 1' => 'h1',
+            'Heading 2' => 'h2',
+            'Heading 3' => 'h3',
+            'Heading 4' => 'h4',
+            'Heading 5' => 'h5',
+            'Heading 6' => 'h6'
+        ],
+        'styleformats' => [
+            [
+                'title' => 'Headings',
+                'icon' => '',
+                'items' => [
+                    [
+                        'title' => 'Heading 1',
+                        'classes' => 'h1',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Heading 2',
+                        'classes' => 'h2',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Heading 3',
+                        'classes' => 'h3',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Heading 4',
+                        'classes' => 'h4',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Heading 5',
+                        'classes' => 'h5',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Heading 6',
+                        'classes' => 'h6',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Sans',
+                        'classes' => 'sans',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Serif',
+                        'classes' => 'serif',
+                        'selector' => '*'
+                    ]
+                ]
+            ],
+            [
+                'title' => 'Body',
+                'icon' => '',
+                'items' => [
+                    [
+                        'title' => 'Small',
+                        'classes' => 'small',
+                        'selector' => 'p'
+                    ],
+                    [
+                        'title' => 'Sans',
+                        'classes' => 'sans',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Sans',
+                        'classes' => 'sans',
+                        'selector' => '*'
+                    ]
+                ]
+            ],
+            [
+                'title' => 'Buttons',
+                'icon' => '',
+                'items' => [
+                    [
+                        'title' => 'Button',
+                        'classes' => 'button',
+                        'selector' => 'a,button'
+                    ],
+                    [
+                        'title' => 'Button Ghost',
+                        'classes' => 'button--ghost',
+                        'selector' => 'a,button'
+                    ],
+                    [
+                        'title' => 'Button Small',
+                        'classes' => 'button--small',
+                        'selector' => '.button'
+                    ],
+                    [
+                        'title' => 'Button Link',
+                        'classes' => 'button--link',
+                        'selector' => '.button'
+                    ]
+                ]
+            ]
+        ],
+        'toolbars' => [
+            'default' => [
+                [
+                    'formatselect',
+                    'styleselect',
+                    'bold',
+                    'italic',
+                    'underline',
+                    'superscript',
+                    'blockquote',
+                    '|',
+                    'forecolor',
+                    'backcolor',
+                    '|',
+                    'alignleft',
+                    'aligncenter',
+                    'alignright',
+                    'alignjustify',
+                    '|',
+                    'bullist',
+                    'numlist',
+                    '|',
+                    'link',
+                    'unlink',
+                    '|',
+                    'removeformat'
+                ]
+            ],
+            'basic' => [
+                [
+                    'bold',
+                    'italic',
+                    'underline',
+                    'superscript',
+                    'blockquote',
+                    '|',
+                    'forecolor',
+                    'backcolor',
+                    '|',
+                    'alignleft',
+                    'aligncenter',
+                    'alignright',
+                    'alignjustify',
+                    '|',
+                    'link',
+                    'unlink'
+                ]
+            ]
+        ]
+    ];
+}
+
 /**
  *
  *

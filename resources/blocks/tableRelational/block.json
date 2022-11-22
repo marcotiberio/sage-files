@@ -1,0 +1,17 @@
+{
+    "name": "tableRelational",
+    "title": "Table Relational",
+    "description": "Displays a list of posts in a table.",
+    "category": "theme",
+    "apiVersion": 2,
+    "keywords": [
+        "posts"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "/resources/blocks/tableRelational/block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

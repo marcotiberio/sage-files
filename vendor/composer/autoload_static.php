@@ -7,17 +7,36 @@ namespace Composer\Autoload;
 class ComposerStaticInit49417cd3023e08323d22e672e5a9e684
 {
     public static $files = array (
+        'ac773ca18bc86f9208de2ed8068423eb' => __DIR__ . '/..' . '/johnbillion/extended-cpts/functions.php',
         'c2c8b4c3b32bcfd3011957f0fdd9f363' => __DIR__ . '/..' . '/mwdelaney/sage-acf-gutenberg-blocks/sage-acf-gutenberg-blocks.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'E' => 
+        array (
+            'ExtCPTs\\Tests\\' => 14,
+            'ExtCPTs\\' => 8,
+        ),
         'A' => 
         array (
+            'Args\\' => 5,
             'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'ExtCPTs\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/johnbillion/extended-cpts/tests/integration',
+        ),
+        'ExtCPTs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/johnbillion/extended-cpts/src',
+        ),
+        'Args\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/johnbillion/args/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -29,6 +48,69 @@ class ComposerStaticInit49417cd3023e08323d22e672e5a9e684
         'App\\View\\Components\\Alert' => __DIR__ . '/../..' . '/app/View/Components/Alert.php',
         'App\\View\\Composers\\App' => __DIR__ . '/../..' . '/app/View/Composers/App.php',
         'App\\View\\Composers\\Post' => __DIR__ . '/../..' . '/app/View/Composers/Post.php',
+        'Args\\Shared\\Arrayable' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/Arrayable.php',
+        'Args\\Shared\\Base' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/Base.php',
+        'Args\\Shared\\DateQuery' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/DateQuery.php',
+        'Args\\Shared\\DateQueryClause' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/DateQueryClause.php',
+        'Args\\Shared\\DateQueryValues' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/DateQueryValues.php',
+        'Args\\Shared\\MetaQuery' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/MetaQuery.php',
+        'Args\\Shared\\MetaQueryClause' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/MetaQueryClause.php',
+        'Args\\Shared\\MetaQueryValues' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/MetaQueryValues.php',
+        'Args\\Shared\\ProvidesDateQueryArgs' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/ProvidesDateQueryArgs.php',
+        'Args\\Shared\\ProvidesFromArray' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/ProvidesFromArray.php',
+        'Args\\Shared\\ProvidesMetaQueryArgs' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/ProvidesMetaQueryArgs.php',
+        'Args\\Shared\\ProvidesTaxQueryArgs' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/ProvidesTaxQueryArgs.php',
+        'Args\\Shared\\ProvidesToArray' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/ProvidesToArray.php',
+        'Args\\Shared\\TaxQuery' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/TaxQuery.php',
+        'Args\\Shared\\TaxQueryClause' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/TaxQueryClause.php',
+        'Args\\Shared\\TaxQueryValues' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/TaxQueryValues.php',
+        'Args\\Shared\\WithDateQueryArgs' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/WithDateQueryArgs.php',
+        'Args\\Shared\\WithMetaQueryArgs' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/WithMetaQueryArgs.php',
+        'Args\\Shared\\WithTaxQueryArgs' => __DIR__ . '/..' . '/johnbillion/args/src/Shared/WithTaxQueryArgs.php',
+        'Args\\WP_Comment_Query' => __DIR__ . '/..' . '/johnbillion/args/src/WP_Comment_Query.php',
+        'Args\\WP_Http' => __DIR__ . '/..' . '/johnbillion/args/src/WP_Http.php',
+        'Args\\WP_Query' => __DIR__ . '/..' . '/johnbillion/args/src/WP_Query.php',
+        'Args\\WP_Term_Query' => __DIR__ . '/..' . '/johnbillion/args/src/WP_Term_Query.php',
+        'Args\\WP_User_Query' => __DIR__ . '/..' . '/johnbillion/args/src/WP_User_Query.php',
+        'Args\\get_categories' => __DIR__ . '/..' . '/johnbillion/args/src/get_categories.php',
+        'Args\\get_comments' => __DIR__ . '/..' . '/johnbillion/args/src/get_comments.php',
+        'Args\\get_posts' => __DIR__ . '/..' . '/johnbillion/args/src/get_posts.php',
+        'Args\\get_tags' => __DIR__ . '/..' . '/johnbillion/args/src/get_tags.php',
+        'Args\\get_terms' => __DIR__ . '/..' . '/johnbillion/args/src/get_terms.php',
+        'Args\\get_users' => __DIR__ . '/..' . '/johnbillion/args/src/get_users.php',
+        'Args\\register_meta' => __DIR__ . '/..' . '/johnbillion/args/src/register_meta.php',
+        'Args\\register_post_meta' => __DIR__ . '/..' . '/johnbillion/args/src/register_post_meta.php',
+        'Args\\register_post_status' => __DIR__ . '/..' . '/johnbillion/args/src/register_post_status.php',
+        'Args\\register_post_type' => __DIR__ . '/..' . '/johnbillion/args/src/register_post_type.php',
+        'Args\\register_rest_field' => __DIR__ . '/..' . '/johnbillion/args/src/register_rest_field.php',
+        'Args\\register_taxonomy' => __DIR__ . '/..' . '/johnbillion/args/src/register_taxonomy.php',
+        'Args\\register_term_meta' => __DIR__ . '/..' . '/johnbillion/args/src/register_term_meta.php',
+        'Args\\wp_count_terms' => __DIR__ . '/..' . '/johnbillion/args/src/wp_count_terms.php',
+        'Args\\wp_die' => __DIR__ . '/..' . '/johnbillion/args/src/wp_die.php',
+        'Args\\wp_get_nav_menus' => __DIR__ . '/..' . '/johnbillion/args/src/wp_get_nav_menus.php',
+        'Args\\wp_get_object_terms' => __DIR__ . '/..' . '/johnbillion/args/src/wp_get_object_terms.php',
+        'Args\\wp_insert_post' => __DIR__ . '/..' . '/johnbillion/args/src/wp_insert_post.php',
+        'Args\\wp_insert_term' => __DIR__ . '/..' . '/johnbillion/args/src/wp_insert_term.php',
+        'Args\\wp_insert_user' => __DIR__ . '/..' . '/johnbillion/args/src/wp_insert_user.php',
+        'Args\\wp_remote_get' => __DIR__ . '/..' . '/johnbillion/args/src/wp_remote_get.php',
+        'Args\\wp_remote_head' => __DIR__ . '/..' . '/johnbillion/args/src/wp_remote_head.php',
+        'Args\\wp_remote_post' => __DIR__ . '/..' . '/johnbillion/args/src/wp_remote_post.php',
+        'Args\\wp_remote_request' => __DIR__ . '/..' . '/johnbillion/args/src/wp_remote_request.php',
+        'Args\\wp_update_post' => __DIR__ . '/..' . '/johnbillion/args/src/wp_update_post.php',
+        'Args\\wp_update_term' => __DIR__ . '/..' . '/johnbillion/args/src/wp_update_term.php',
+        'Args\\wp_update_user' => __DIR__ . '/..' . '/johnbillion/args/src/wp_update_user.php',
+        'ExtCPTs\\Args\\PostType' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/Args/PostType.php',
+        'ExtCPTs\\Args\\Taxonomy' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/Args/Taxonomy.php',
+        'ExtCPTs\\ExtendedRewriteTesting' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/ExtendedRewriteTesting.php',
+        'ExtCPTs\\PostType' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/PostType.php',
+        'ExtCPTs\\PostTypeAdmin' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/PostTypeAdmin.php',
+        'ExtCPTs\\PostTypeRewriteTesting' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/PostTypeRewriteTesting.php',
+        'ExtCPTs\\Taxonomy' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/Taxonomy.php',
+        'ExtCPTs\\TaxonomyAdmin' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/TaxonomyAdmin.php',
+        'ExtCPTs\\TaxonomyRewriteTesting' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/TaxonomyRewriteTesting.php',
+        'ExtCPTs\\Walker\\Checkboxes' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/Walker/Checkboxes.php',
+        'ExtCPTs\\Walker\\Dropdown' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/Walker/Dropdown.php',
+        'ExtCPTs\\Walker\\Radios' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/Walker/Radios.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
