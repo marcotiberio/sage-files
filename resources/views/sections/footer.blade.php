@@ -6,7 +6,7 @@
           <?php if( have_rows('social_media', 'options') ): ?>
             <?php while( have_rows('social_media', 'options') ): the_row();
                 ?>
-                <a class="capitalize mr-sm" href="{{the_sub_field('social_url')}}" target="_blank">{{the_sub_field('social_channel')}}</a>
+                <a class="capitalize mr-sm" href="{{the_sub_field('social_url')}}" target="_blank"><i class="fa-brands fa-{{the_sub_field('social_channel')}}"></i></a>
             <?php endwhile; ?>
           <?php endif; ?>
         </div>

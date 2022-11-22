@@ -15,62 +15,47 @@
   </div>
   <ul class="flex flex-col lg:flex-row gap-x-12 gap-y-12">
   <?php
-    $args = array(
+    $the_query = new WP_Query(array(
       'post_type' => 'post',
       'post_status' => 'publish',
       'orderby' => 'date',
       'order' => 'DESC',
       'posts_per_page' => -1,
-    );
-    $query = new WP_Query( $args );
+    ));
+    ?>
 
-    if( $query->have_posts() ) :
-      while( $query->have_posts() ) :
-      $query->the_post();
-        // if ( $query->have_posts() ) :
+    <?php if( $the_query->have_posts() ): ?>
 
-        //   while ( $query->have_posts() ) :
-        //     $query->the_post();
-        //     $categories = get_the_category();
-        //     // $cls = '';
-        //     // if ( ! empty( $categories ) ) {
-        //     //   foreach ( $categories as $cat ) {
-        //     //     $cls .= $cat->slug . ' ';
-        //     //   }
-        //     // }
-        ?>
+      <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-        <li class="flex-1 p-md shadow-sm hover:shadow-lg rounded-sm w-full">
-          <a class="text-gray" href="@php(the_permalink())">
-            <div class="featuredImage h-60 mb-sm border-1 border-black">
-              <img src="<?php the_post_thumbnail_url('large'); ?>" class="w-full h-full object-cover">
-            </div>
-            <div class="text-md font-normal rounded-sm bg-lightgray text-black mb-sm w-min px-sm">
-              <?php $categories = get_the_category(); if ( ! empty( $categories ) ) { echo esc_html( $categories[0]->name ); }?>
-            </div>
-            <div class="text-2xl text-black font-bold mb-sm">@php(the_title())</div>
-            <div class="text-lg font-normal text-gray">
-              <?php
-                $content = do_blocks(get_the_content());
-                $excerpt = wp_trim_words($content, 20);
-                echo $excerpt;
-              ?>
-            </div>
-          </a>
-        </li>
+      <li class="flex-1 p-md shadow-sm hover:shadow-lg rounded-sm w-full">
+        <a class="text-gray" href="@php(the_permalink())">
+          <div class="featuredImage h-60 mb-sm border-1 border-black">
+            <img src="<?php the_post_thumbnail_url('large'); ?>" class="w-full h-full object-cover">
+          </div>
+          <div class="text-md font-normal rounded-sm bg-lightgray text-black mb-sm w-min px-sm">
+            <?php $categories = get_the_category(); if ( ! empty( $categories ) ) { echo esc_html( $categories[0]->name ); }?>
+          </div>
+          <div class="text-2xl text-black font-bold mb-sm">@php(the_title())</div>
+          <div class="text-lg font-normal text-gray">
+            <?php
+              $content = do_blocks(get_the_content());
+              $excerpt = wp_trim_words($content, 20);
+              echo $excerpt;
+            ?>
+          </div>
+        </a>
+      </li>
 
-        <?php
-      endwhile;
-    endif;
-  ?>
+      <?php endwhile; ?>
+
+    <?php endif; ?>
+
+    <?php wp_reset_query();	?>
   </ul>
 </section>
 
 <style type="text/css">
 [data-{{$block['id']}}] {
-  li {
-    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-  }
 }
 </style>

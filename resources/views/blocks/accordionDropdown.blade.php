@@ -14,7 +14,7 @@
           ?>
           <div x-data="{ open: false }" class="panel mb-5 last:mb-0">
             <button x-on:click="open = ! open" data-target="accordion-<?php echo get_row_index(); ?>" class="text-2xl hover:text-brand mb-2.5">{{the_sub_field('title')}}</button>
-            <div x-show="open" x-transition.opacity id="accordion-<?php echo get_row_index(); ?>">
+            <div x-show="open" x-transition.opacity id="accordion-<?php echo get_row_index(); ?>" class="ease-linear duration-200">
               {{the_sub_field('contentHtml')}}
             </div>
           </div>

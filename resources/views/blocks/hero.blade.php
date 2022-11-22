@@ -20,7 +20,7 @@
           $link_title = $link['title'];
           $link_target = $link['target'] ? $link['target'] : '_self';
           ?>
-          <a class="bg-black hover:bg-white border border-white hover:border hover:border-black inline-flex justify-center items-center py-2 px-6 text-base font-medium text-center text-white hover:text-black" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+          <a class="bg-black hover:bg-white border border-white hover:border hover:border-black inline-flex justify-center items-center py-2 px-6 text-base font-medium text-center text-white hover:text-black ease-linear duration-200" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
       <?php endif; ?>
       <?php 
       $link = get_field('secondary_button');
@@ -29,7 +29,7 @@
           $link_title = $link['title'];
           $link_target = $link['target'] ? $link['target'] : '_self';
           ?>
-          <a class="bg-white hover:bg-black border border-black inline-flex justify-center items-center py-2 px-6 text-base font-medium text-center text-black hover:text-white" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+          <a class="bg-white hover:bg-black border border-black inline-flex justify-center items-center py-2 px-6 text-base font-medium text-center text-black hover:text-white ease-linear duration-200" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
       <?php endif; ?>
     </div>
   </div>

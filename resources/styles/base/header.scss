@@ -2,6 +2,27 @@
     height: var(--navHeightMobile);
     order: 1;
 
+    .hamburger {
+        &.open {
+            .hamburger-barOne {
+                @apply top-[9px];
+                transform: rotate(45deg);
+            }
+
+            .hamburger-barTwo {
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.1s all linear;
+            }
+
+            .hamburger-barThree {
+                @apply top-[9px];
+                @apply w-[30px];
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
     .nav {
         order: 2;
 
